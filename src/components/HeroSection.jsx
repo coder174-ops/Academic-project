@@ -110,44 +110,46 @@ export default function App() {
         <BackgroundCircles />
 
 
-        {/* 3. --- Content Area (z-index higher than backgrounds) --- */}
-        <div className="pt-24 sm:pt-32 flex flex-col items-center max-w-7xl w-full relative z-10">
-          
-          {/* Join Us Badge */}
-          <div className="flex items-center gap-2 border border-slate-600 text-gray-50 rounded-full px-4 py-1.5 transition duration-300 hover:border-[#06B6D4] cursor-pointer">
-            <div className="size-2.5 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-xs sm:text-sm">Join Us Today!</span>
-          </div>
+    {/* 3. --- Content Area (z-index higher than backgrounds) --- */}
+<div className="pt-8 sm:pt-32 flex flex-col items-center max-w-7xl w-full relative z-10">
+  
+  {/* NEW POSITION: Join Us Badge (Now above the title) */}
+  <div className="mb-16 lg:mb-10"> {/* Added margin-bottom to space it from the title */}
+    <div className="flex items-center gap-2 border border-slate-600 text-gray-50 rounded-full px-4 py-1.5 transition duration-300 hover:border-[#06B6D4] cursor-pointer">
+      <div className="size-2.5 bg-green-500 rounded-full animate-pulse"></div>
+      <span className="text-xs sm:text-sm">Join Us Today!</span> 
+    </div>
+  </div>
 
-          {/* Title - Responsive Font Sizes */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl text-center font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-            Welcome to{" "}
-            <span className="text-4xl md:text-5xl lg:text-7xl text-center font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">Student Skill Community!</span>
-          </h1>
+  {/* Title - Responsive Font Sizes */}
+  <h1 className="text-[2.5rem] md:text-5xl lg:text-7xl text-center font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
+    Welcome to{" "}
+    <span className="text-[2.5rem] md:text-5xl lg:text-7xl text-center font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">Student Skill Community!</span>
+  </h1>
 
-          {/* Subtext - Responsive Max Width */}
-          <p className="text-center text-base sm:text-lg max-w-xl mt-4 text-gray-300 px-4">
-            Our platform helps you build, test, and deliver faster — so you can
-            focus on what matters.
-          </p>
+  {/* Subtext - Responsive Max Width */}
+  <p className="text-center text-base sm:text-lg max-w-xl mt-4 text-gray-300 px-4">
+    Our platform helps you build, test, and deliver faster — so you can
+    focus on what matters.
+  </p>
 
-          {/* Buttons - Centered and Spaced */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
-            {/* Primary Button with Rainbow Effect */}
-            <div className="rainbow relative z-0 bg-white/15 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-[1.03] transition duration-300 active:scale-95 shadow-lg shadow-[#06B6D4]/30">
-              <button className="px-8 text-sm py-3 text-white rounded-full font-medium bg-gray-900/80 backdrop-blur-sm tracking-wide cursor-pointer">
-                Get started
-              </button>
-            </div>
+  {/* Buttons - Centered and Spaced (already responsive with flex-col on mobile, flex-row on small screens and up) */}
+  <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
+    {/* Primary Button with Rainbow Effect */}
+    <div className="rainbow relative z-0 bg-white/15 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-[1.03] transition duration-300 active:scale-95 shadow-lg shadow-[#06B6D4]/30">
+      <button className="px-8 text-sm py-3 text-white rounded-full font-medium bg-gray-900/80 backdrop-blur-sm tracking-wide cursor-pointer">
+        Get started
+      </button>
+    </div>
 
-            {/* Secondary Button with Gradient Border (BackgroundCircles removed from here) */}
-            <div className="button-bg1 rounded-full p-0.5 hover:scale-[1.03] transition duration-300 active:scale-95 shadow-lg shadow-pink-500/30">
-              <button className="px-8 text-sm py-2.5 text-white rounded-full font-medium bg-gray-800 tracking-wide cursor-pointer">
-                Explore Community
-              </button>
-            </div>
-          </div>
-        </div>
+    {/* Secondary Button with Gradient Border (BackgroundCircles removed from here) */}
+    <div className="button-bg1 rounded-full p-0.5 hover:scale-[1.03] transition duration-300 active:scale-95 shadow-lg shadow-pink-500/30 ">
+      <button className="px-8 text-sm py-2.5 text-white rounded-full font-medium bg-gray-800 tracking-wide cursor-pointer">
+        Explore Community
+      </button>
+    </div>
+  </div>
+</div>
       </section>
     </div>
   );
